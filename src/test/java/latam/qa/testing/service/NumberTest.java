@@ -19,20 +19,17 @@ public class NumberTest {
         assertFalse(String.format("%d,%d", 1, 5), result);
 
     }
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void divideNumeros_cero(){
 		Number n = new Number();
-		int x=5,y=0;
-		Int result = n.intDivideNumeros(x,y);
-		if(y==0) fail();
+		n.divideNumeros(4,0)
 		
 	}
-	
 	@Test
-	public void divideNumeros(){
+	public void divideNumeros(){		
 		Number n = new Number();
-		Int result = n.intDivideNumeros(5,10);
-		//assertEquals
+		assertEquals(5,n.divideNumeros(20,4))
+		
 		
 	}
    
